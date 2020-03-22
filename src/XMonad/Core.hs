@@ -682,6 +682,8 @@ recompile force = io $ do
          runProcess "ghc" ["--make"
                           , "xmonad.hs"
                           , "-i"
+                          , "-framework"
+                          , "Cocoa"
                           , "-ilib"
                           , "-fforce-recomp"
                           , "-main-is", "main"
